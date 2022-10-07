@@ -10,6 +10,17 @@ using std::cout;
 using std::endl;
 using std::string;
 
+class student {
+public:
+	string name;
+	int age;
+	float gpa;
+	
+	string printDetails() {
+		cout << name << " is " << age << " years old and has a GPA of " << gpa << endl;
+	};
+};
+
 int main() {
 
 	string name1, name2, name3, name4;
