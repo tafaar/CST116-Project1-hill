@@ -11,27 +11,54 @@ using std::endl;
 using std::string;
 
 class student {
+
 public:
+
 	string name;
-	int age = 0;
+	float income = 0;
 	float gpa = 0;
+	int age = 0;
 	
-	void printDetails() {
-		cout << name << " is " << age << " years old and has a GPA of " << gpa << endl;
+	void printDetails(int choice) {
+
+		switch (choice)
+		{
+
+		case 0:
+
+			cout << name << " has an income of " << income << " and a GPA of " << gpa << endl;
+			break;
+
+		case 1:
+
+			cout << name << " has an income of " << income << " and is " << age << " years old." << endl;
+			break;
+
+		}
 	};
 };
 
-student students[4];
-
 int main() {
 
+	student studentsPartOne[4];
+	student studentsPartTwo[4];
+
 	for (int i = 0; i < 4; i++) {
-		cout << "Please enter the name, age, and GPA for student #" << i + 1 << endl;
-		cin >> students[i].name >> students[i].age >> students[i].gpa;
+		cout << "Please enter the name, income, and GPA for student #" << i + 1 << endl;
+		cin >> studentsPartOne[i].name >> studentsPartOne[i].income >> studentsPartOne[i].gpa;
 	}
 
 	for (int i = 0; i < 4; i++) {
-		cout << students[i].name << " is " << students[i].age << " years old with a GPA of " << students[i].gpa << endl;
+		studentsPartOne[i].printDetails(0);
+	}
+
+	for (int i = 0; i < 4; i++) {
+		cout << "Please enter the name, income, and age for student #" << i + 1 << endl;
+		cin >> studentsPartTwo[i].name >> studentsPartTwo[i].income >> studentsPartTwo[i].age;
+	}
+
+	for (int i = 0; i < 4; i++) {
+		studentsPartTwo[i].printDetails(1);
 	}
 
 	/*/
