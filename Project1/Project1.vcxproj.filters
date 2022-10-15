@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Project1-Hill.cpp">
+    <ClCompile Include="Project1-Hill-Correct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Project1-Hill-Incorrect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
