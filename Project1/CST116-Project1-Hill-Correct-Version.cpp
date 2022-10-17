@@ -31,12 +31,12 @@ public:
 		{
 
 		case 0:
-			cout << std::left << setw(headerWidth) << name << setw(headerWidth) << income  << setw(headerWidth) << gpa << endl;
+			cout << left << setw(headerWidth) << name << setw(headerWidth) << income  << setw(headerWidth) << gpa << endl;
 			break;
 
 		case 1:
 
-			cout << std::left << setw(headerWidth) << name << setw(headerWidth) << income << setw(headerWidth) << age << endl;
+			cout << left << setw(headerWidth) << name << setw(headerWidth) << income << setw(headerWidth) << age << endl;
 			break;
 
 		}
@@ -58,7 +58,7 @@ int main() {
 
 	cout << endl;
 
-	cout << std::left << setw(headerWidth) << "Name" << setw(headerWidth) << "Income" << setw(headerWidth) << "GPA" << endl;
+	cout << left << setw(headerWidth) << "Name" << setw(headerWidth) << "Income" << setw(headerWidth) << "GPA" << endl;
 
 	for (int i = 0; i < numStudents; i++) {
 		studentsPartOne[i].printDetails(0);
@@ -73,7 +73,7 @@ int main() {
 
 	cout << endl;
 
-	cout << std::left << setw(headerWidth) << "Name" << setw(headerWidth) << "Income" << setw(headerWidth) << "Age" << endl;
+	cout << left << setw(headerWidth) << "Name" << setw(headerWidth) << "Income" << setw(headerWidth) << "Age" << endl;
 
 	for (int i = 0; i < numStudents; i++) {
 		studentsPartTwo[i].printDetails(1);
