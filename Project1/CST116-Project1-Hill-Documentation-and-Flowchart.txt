@@ -6,32 +6,34 @@ and an input being written to the wrong variable. (logic)
 // Output //
 
 Please enter the name, income, and GPA for student #1
-Lauren 9098643.23445 3.5443
+Shanice 12414.234 3.4324
 Please enter the name, income, and GPA for student #2
-Jose 834958.65 3.67
+Andrew 53754.32 3.245
 Please enter the name, income, and GPA for student #3
-Anabelle 1483283.994 2.39843
+Walter 98341535.35 4.00
 Please enter the name, income, and GPA for student #4
-Andrew 78435.173 2.000
+Emilio 43824.34 2.34
 
-Lauren has an income of 9098643.23 and a GPA of 3.54
-Jose has an income of 834958.65 and a GPA of 3.67
-Anabelle has an income of 1483283.99 and a GPA of 2.40
-Andrew has an income of 78435.17 and a GPA of 2.00
+Name           Income         GPA
+Shanice        12414.23       3.43
+Andrew         53754.32       3.24
+Walter         98341535.35    4.00
+Emilio         43824.34       2.34
 
 Please enter the name, income, and age for student #1
-George 981432.48 43
+Amy 124382.32 23
 Please enter the name, income, and age for student #2
-Oliver 12484.841 19
+Carson 53753.549 31
 Please enter the name, income, and age for student #3
-Hannah 243814.349 23
+Skyler 42801.35 41
 Please enter the name, income, and age for student #4
-Max 849241.4198 54
+Wanda 894328.325 32
 
-George has an income of 981432.48 and is 43 years old.
-Oliver has an income of 12484.84 and is 19 years old.
-Hannah has an income of 243814.35 and is 23 years old.
-Max has an income of 849241.42 and is 54 years old.
+Name           Income         Age
+Amy            124382.32      23
+Carson         53753.55       31
+Skyler         42801.35       41
+Wanda          894328.32      32
 
 // Meetings
 
@@ -52,14 +54,15 @@ I know how to use arrays, so I'll also use that to move and access data more eff
 I don't know how to display floats in non-scientific notation or how to display the appropriate precision.
 
 week 5
-In this session I'll finish part 2, make sure the program works properly, setup my 'mistakes' in the code and keep both copies.
+In this session I'll finish part 2, and apply formatting to this program with <iomanip>
 I know for my variables I need to use strings for names, floats for GPA, doubles for income, and integers for age.
-I've never used do{} or switch statements before, so I'll learn how to use them for this task.
+I've never used do{} or switch statements before, so I'll learn how to use them for this task. I also have never used <iomanip>
 
 
 // Flowchart For My Code //
 
 SET CONST INT numStudents TO 4;
+SET CONST INT headerWidth TO 15;
 
 CREATE CLASS student{
 
@@ -74,11 +77,11 @@ CREATE CLASS student{
 			SWITCH (choice){
 			
 				CASE 0:
-					PRINT name + " has an income of " + income + " and has a GPA of " + gpa;
+					PRINT JUSTIFIED_LEFT name + SPACE(headerWidth) + income + SPACE(headerWidth) + gpa;
 					BREAK;
 
 				CASE 1:
-					PRINT name + " has an income of " + income + " and is " + age + " years old.";
+					PRINT JUSTIFIED_LEFT name + SPACE(headerWidth) + income + SPACE(headerWidth) + age;
 					BREAK;
 			
 			}
@@ -98,6 +101,8 @@ INT main(){
 		studentsPartOne[i].gpa = INPUT;
 	}
 
+	PRINT JUSTIFIED_LEFT "Name" + SPACE(headerWidth) + "Income" + SPACE(headerWidth) + "GPA";
+
 	FOR (INT i = 0; i < numStudents; i++){
 		studentsPartOne[i].printDetails(0);
 	}
@@ -109,11 +114,11 @@ INT main(){
 		studentsPartTwo[i].age = INPUT;
 	}
 
+	PRINT JUSTIFIED_LEFT "Name" + SPACE(headerWidth) + "Income" + SPACE(headerWidth) + "Age";
+
 	FOR (INT i = 0; i < numStudents; i++){
 		studentsPartTwo[i].printDetails(1);
 	}
 
 	RETURN 0;
 }
-
-// Partner's Corrected Code //
