@@ -35,6 +35,8 @@ Max has an income of 849241.42 and is 54 years old.
 
 // Meetings
 
+On week 3 I exchanged contact information with Jonathan in class. This happened on 10/5
+
 On week 4 me and Jonathan met at 10pm on 10/16 to exchange code and discuss any challenges there may have been with the project. We chatted over Discord.
 
 // Status Updates //
@@ -55,7 +57,7 @@ I know for my variables I need to use strings for names, floats for GPA, doubles
 I've never used do{} or switch statements before, so I'll learn how to use them for this task.
 
 
-// Flowchart Below //
+// Flowchart For My Code //
 
 SET CONST INT numStudents TO 4;
 
@@ -113,3 +115,5 @@ INT main(){
 
 	RETURN 0;
 }
+
+// Partner's Corrected Code //
