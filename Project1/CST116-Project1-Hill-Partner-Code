@@ -1,0 +1,81 @@
+// Run //
+
+Hello and welcome to Project 1!
+
+Enter student 1's first name: Harrison
+Enter student 1's last name: Blue
+Enter student 1's income: 23523553.325
+Enter student 1's GPA: 2.423
+Enter student 2's first name: Grayson
+Enter student 2's last name: Green
+Enter student 2's income: 4234.143
+Enter student 2's GPA: 2.3414
+Enter student 3's first name: Oscar
+Enter student 3's last name: Black
+Enter student 3's income: 4235352.325
+Enter student 3's GPA: 3.456
+Enter student 4's first name: Satcy
+Enter student 4's last name: Grey
+Enter student 4's income: 3422345.235
+Enter student 4's GPA: 2.235
+
+
+
+
+Last Name      First Name     Income         GPA
+Blue           Harrison       23523554.00    2.42
+Green          Grayson        4234.14        2.34
+Black          Oscar          4235352.50     3.46
+Grey           Satcy          3422345.25     2.23
+
+// Errors //
+The errors included in their code were a missing { in a for function, and a
+logic error where a loop executed while i was greater than 4 when it should
+have been less than 4.
+
+// Original Code //
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	// Greeting
+	cout << "Hello and welcome to Prjoect 1!" << endl << endl;
+
+	// Input student information
+	string fName[4];
+	string lName[4];
+	float Income[4];
+	float GPA[4];
+	for (int i = 0; i < 4; i++);
+		{
+		cout << "Enter student " << i + 1 << "'s first name: ";
+		cin >> fName[i];
+		cout << "Enter student " << i + 1 << "'s lirst name: ";
+		cin >> lName[i];
+		cout << "Enter student " << i + 1 << "'s income: ";
+		cin >> Income[i];
+		cout << "Enter student " << i + 1 << "'s GPA: ";
+		cin >> GPA[i];
+	}
+
+	//Spacer
+	cout << endl << endl << endl;
+
+	// Display information
+	const int W = 15;
+	cout << endl << left << setw(W) << "Last Name" << setw(W) << "First Name" << setw(W) << "Income" << setw(W) << "GPA";
+	for (int a = 0; a > 4; a++)
+		{
+		cout << endl << setprecision(2) << fixed << left << setw(W) << lName[a] << setw(W) << fName[a] << setw(W) << Income[a] << setw(W) << GPA[a];
+	}
+
+	//Spacer
+	cout << endl << endl;
+
+	return 0;
+}
