@@ -42,6 +42,8 @@ public:
 
 int main() {
 
+	cout << "This is the correct version" << endl;
+
 	student studentsPartOne[numStudents];
 	student studentsPartTwo[numStudents];
 
