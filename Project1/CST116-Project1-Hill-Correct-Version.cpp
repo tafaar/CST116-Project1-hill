@@ -4,13 +4,17 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+using std::left;
+using std::setw;
 
 const int numStudents = 4;
+const int headerWidth = 15;
 
 class student {
 
@@ -27,13 +31,12 @@ public:
 		{
 
 		case 0:
-
-			cout << name << " has an income of " << income << " and a GPA of " << gpa << endl;
+			cout << std::left << setw(headerWidth) << name << setw(headerWidth) << income  << setw(headerWidth) << gpa << endl;
 			break;
 
 		case 1:
 
-			cout << name << " has an income of " << income << " and is " << age << " years old." << endl;
+			cout << std::left << setw(headerWidth) << name << setw(headerWidth) << income << setw(headerWidth) << age << endl;
 			break;
 
 		}
@@ -41,8 +44,6 @@ public:
 };
 
 int main() {
-
-	cout << "This is the correct version" << endl;
 
 	student studentsPartOne[numStudents];
 	student studentsPartTwo[numStudents];
@@ -57,6 +58,8 @@ int main() {
 
 	cout << endl;
 
+	cout << std::left << setw(headerWidth) << "Name" << setw(headerWidth) << "Income" << setw(headerWidth) << "GPA" << endl;
+
 	for (int i = 0; i < numStudents; i++) {
 		studentsPartOne[i].printDetails(0);
 	}
@@ -69,6 +72,8 @@ int main() {
 	}
 
 	cout << endl;
+
+	cout << std::left << setw(headerWidth) << "Name" << setw(headerWidth) << "Income" << setw(headerWidth) << "Age" << endl;
 
 	for (int i = 0; i < numStudents; i++) {
 		studentsPartTwo[i].printDetails(1);
