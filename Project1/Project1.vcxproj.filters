@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CST116-Project1-Hill-Incorrect.cpp">
+    <ClCompile Include="CST116-Project1-Hill-Correct-Version.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
