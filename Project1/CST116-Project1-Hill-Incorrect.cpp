@@ -1,5 +1,5 @@
 /*
-* CST 116, Aaron Hill
+* CST 116, Aaron Hill, aaron.hill@oit.edu
 */
 
 #include <iostream>
@@ -48,7 +48,7 @@ int main() {
 	cout << std::fixed;
 	cout.precision(2);
 
-	for (int i = 0; i < numStudents; i++) {
+	for (int i = 0; i < numStudents; i++) 
 		cout << "Please enter the name, income, and GPA for student #" << i + 1 << endl;
 		cin >> studentsPartOne[i].name >> studentsPartOne[i].income >> studentsPartOne[i].gpa;
 	}
@@ -63,7 +63,7 @@ int main() {
 
 	for (int i = 0; i < numStudents; i++) {
 		cout << "Please enter the name, income, and age for student #" << i + 1 << endl;
-		cin >> studentsPartTwo[i].name >> studentsPartTwo[i].income >> studentsPartTwo[i].age;
+		cin >> studentsPartTwo[i].name >> studentsPartOne[i].income >> studentsPartTwo[i].age;
 	}
 
 	cout << endl;

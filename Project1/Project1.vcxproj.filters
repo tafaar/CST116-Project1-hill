@@ -15,11 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Project1-Hill-Correct.cpp">
+    <ClCompile Include="CST116-Project1-Hill-Incorrect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Project1-Hill-Incorrect.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CST116-Project1-Hill-Documentation-and-Flowchart.txt">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </Text>
   </ItemGroup>
 </Project>

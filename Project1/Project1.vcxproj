@@ -127,8 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Project1-Hill-Correct.cpp" />
-    <ClCompile Include="Project1-Hill-Incorrect.cpp" />
+    <ClCompile Include="CST116-Project1-Hill-Incorrect.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CST116-Project1-Hill-Documentation-and-Flowchart.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

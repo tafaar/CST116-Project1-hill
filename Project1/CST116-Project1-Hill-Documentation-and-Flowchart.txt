@@ -1,0 +1,115 @@
+CST116 Aaron Hill, aaron.hill@oit.edu
+
+The errors included in my code were a missing "{" in a for statement (syntax),
+and an input being written to the wrong variable. (logic)
+
+// Output //
+
+Please enter the name, income, and GPA for student #1
+Lauren 9098643.23445 3.5443
+Please enter the name, income, and GPA for student #2
+Jose 834958.65 3.67
+Please enter the name, income, and GPA for student #3
+Anabelle 1483283.994 2.39843
+Please enter the name, income, and GPA for student #4
+Andrew 78435.173 2.000
+
+Lauren has an income of 9098643.23 and a GPA of 3.54
+Jose has an income of 834958.65 and a GPA of 3.67
+Anabelle has an income of 1483283.99 and a GPA of 2.40
+Andrew has an income of 78435.17 and a GPA of 2.00
+
+Please enter the name, income, and age for student #1
+George 981432.48 43
+Please enter the name, income, and age for student #2
+Oliver 12484.841 19
+Please enter the name, income, and age for student #3
+Hannah 243814.349 23
+Please enter the name, income, and age for student #4
+Max 849241.4198 54
+
+George has an income of 981432.48 and is 43 years old.
+Oliver has an income of 12484.84 and is 19 years old.
+Hannah has an income of 243814.35 and is 23 years old.
+Max has an income of 849241.42 and is 54 years old.
+
+// Meetings
+
+On week 4 me and Jonathan met at 10pm on 10/16 to exchange code and discuss any challenges there may have been with the project. We chatted over Discord.
+
+// Status Updates //
+
+week 3
+In this session, I will set up the inputs and outputs for part 1
+I know how to take inputs, store them in variables, and send them out as messages. I also know how to use classes to store multiple variables, how to access those variables, and how to add functions to a class.
+I don't know how to use strings in C++, so I'll look into that during this session.
+
+week 4
+In this session I'll update my program to display floats to 2 points after the decimal, and to use for() loops to ask for the user's input more efficiently.
+I know how to use arrays, so I'll also use that to move and access data more efficiently.
+I don't know how to display floats in non-scientific notation or how to display the appropriate precision.
+
+week 5
+In this session I'll finish part 2, make sure the program works properly, setup my 'mistakes' in the code and keep both copies.
+I know for my variables I need to use strings for names, floats for GPA, doubles for income, and integers for age.
+I've never used do{} or switch statements before, so I'll learn how to use them for this task.
+
+
+// Flowchart Below //
+
+SET CONST INT numStudents TO 4;
+
+CREATE CLASS student{
+
+	PUBLIC:
+		INITIALIZE STRING name;
+		INITIALIZE DOUBLE income AT 0;
+		INITIALIZE FLOAT gpa AT 0;
+		INITIALIZE INT age AT 0;
+
+		DEFINE FUNCTION VOID printDetails(int choice){
+		
+			SWITCH (choice){
+			
+				CASE 0:
+					PRINT name + " has an income of " + income + " and has a GPA of " + gpa;
+					BREAK;
+
+				CASE 1:
+					PRINT name + " has an income of " + income + " and is " + age + " years old.";
+					BREAK;
+			
+			}
+		
+		}
+}
+
+INT main(){
+
+	ARRAY STUDENT studenstPartOne[numStudents];
+	ARRAY STUDENT studenstPartTwo[numStudents];
+
+	FOR (INT i = 0; i < numStudents; i++){
+		PRINT "Please enter the name, income, and GPA for student #" + i;
+		studentsPartOne[i].name = INPUT;
+		studentsPartOne[i].income = INPUT;
+		studentsPartOne[i].gpa = INPUT;
+	}
+
+	FOR (INT i = 0; i < numStudents; i++){
+		studentsPartOne[i].printDetails(0);
+	}
+
+	FOR (INT i = 0; i < numStudents; i++){
+		PRINT "Please enter the name, income, and age for student #" + i;
+		studentsPartTwo[i].name = INPUT;
+		studentsPartTwo[i].income = INPUT;
+		studentsPartTwo[i].age = INPUT;
+	}
+
+	FOR (INT i = 0; i < numStudents; i++){
+		studentsPartTwo[i].printDetails(1);
+	}
+
+	RETURN 0;
+}
