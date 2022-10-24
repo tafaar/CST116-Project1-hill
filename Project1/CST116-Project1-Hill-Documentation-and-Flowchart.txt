@@ -41,6 +41,8 @@ On week 3 I exchanged contact information with Jonathan in class. This happened 
 
 On week 4 me and Jonathan met at 10pm on 10/16 to exchange code and discuss any challenges there may have been with the project. We chatted over Discord.
 
+On week 5, we met again on Discord at 7pm on 10/23 to check each others' code.
+
 // Status Updates //
 
 week 3
@@ -56,7 +58,7 @@ I don't know how to display floats in non-scientific notation or how to display 
 week 5
 In this session I'll finish part 2, and apply formatting to this program with <iomanip>
 I know for my variables I need to use strings for names, floats for GPA, doubles for income, and integers for age.
-I've never used do{} or switch statements before, so I'll learn how to use them for this task. I also have never used <iomanip>
+I've never used <iomanip>, so I'll be looking at the documentation on how to use the manipulators and cout member functions.
 
 
 // Flowchart For My Code //
